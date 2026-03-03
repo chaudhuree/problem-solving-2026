@@ -1,27 +1,11 @@
 #include <iostream>
-#include <fstream>
 using namespace std;
 
-int main()
-{
+int main() {
+    int a, b;
+    char s;
+    cin >> a >> s >> b;
 
-    // convert capital letters to small letters and vice versa
-    char ch;
-    cin >> ch;
-    if (ch >= 'A' && ch <= 'Z')
-    {
-        ch = ch + 32;
-        cout << ch;
-    }
-    else if (ch >= 'a' && ch <= 'z')
-    {
-        ch = ch - 32;
-        cout << ch;
-    }
-    else
-    {
-        cout << "Invalid input!" << endl;
-    }
-
+    cout << (s=='<' && a < b || s=='>' && a > b || s=='=' && a == b ? "Right" : "Wrong") << endl;
     return 0;
 }
