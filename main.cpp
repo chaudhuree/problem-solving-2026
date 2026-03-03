@@ -5,11 +5,23 @@ using namespace std;
 int main()
 {
 
-    // ifstream cin("input.txt");
-    // ofstream cout("output.txt");
-    int i;
-    cin >> i;
-    cout << "Hello, " << i << endl;
+    // convert capital letters to small letters and vice versa
+    char ch;
+    cin >> ch;
+    if (ch >= 'A' && ch <= 'Z')
+    {
+        ch = ch + 32;
+        cout << ch;
+    }
+    else if (ch >= 'a' && ch <= 'z')
+    {
+        ch = ch - 32;
+        cout << ch;
+    }
+    else
+    {
+        cout << "Invalid input!" << endl;
+    }
 
     return 0;
 }
