@@ -2,10 +2,13 @@
 using namespace std;
 
 int main() {
-    int a, b;
-    char s;
-    cin >> a >> s >> b;
+    long long a, b, k;
+    cin >> a >> b >> k;
 
-    cout << (s=='<' && a < b || s=='>' && a > b || s=='=' && a == b ? "Right" : "Wrong") << endl;
+    cout << (a%k==0 && b%k==0 ? "Both" :
+            a%k==0 ? "Memo" :
+            b%k==0 ? "Momo" :
+            "No One");
+
     return 0;
 }
