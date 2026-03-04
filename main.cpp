@@ -1,32 +1,25 @@
 /*
  * Author: Shahriar Kabir Sohan
  * github: chaudhuree
- * Program: Sum of Odd Numbers Between Two Integers
- * https://codeforces.com/group/MWSDmqGsZm/contest/219432/problem/S
+ * Program: factorial
+ * https://codeforces.com/group/MWSDmqGsZm/contest/219432/problem/G
  */
 #include <iostream>
 using namespace std;
 
 int main()
 {
-    int numberofTestCases;
-    cin >> numberofTestCases;
-    while (numberofTestCases--)
+    int t;
+    cin >> t;
+
+    while (t--)
     {
-        int firstInteger, secondInteger, sum = 0;
-        cin >> firstInteger >> secondInteger;
-        if (firstInteger > secondInteger)
-        {
-            swap(firstInteger, secondInteger);
-        }
-        for (int i = firstInteger + 1; i < secondInteger; i++)
-        {
-            if (i % 2 != 0)
-            {
-                sum += i;
-            }
-        }
-        cout << sum << endl;
+        long long n, f = 1;
+        cin >> n;
+
+        for (int i = 1; i <= n; i++)
+            f *= i;
+
+        cout << f << endl;
     }
-    return 0;
 }
