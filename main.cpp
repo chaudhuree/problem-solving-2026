@@ -1,25 +1,26 @@
 /*
  * Author: Shahriar Kabir Sohan
  * github: chaudhuree
- * Program: factorial
- * https://codeforces.com/group/MWSDmqGsZm/contest/219432/problem/G
+ * Program: password fix
+ * https://codeforces.com/group/MWSDmqGsZm/contest/219432/problem/D
  */
 #include <iostream>
 using namespace std;
 
 int main()
 {
-    int t;
-    cin >> t;
+    int X;
 
-    while (t--)
+    while (cin >> X)
     {
-        long long n, f = 1;
-        cin >> n;
+        if (X == 1999)
+        {
+            cout << "Correct";
+            break;
+        }
 
-        for (int i = 1; i <= n; i++)
-            f *= i;
-
-        cout << f << endl;
+        cout << "Wrong" << endl;
     }
+
+    return 0;
 }
