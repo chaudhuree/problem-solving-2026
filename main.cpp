@@ -1,14 +1,32 @@
+/*
+ * Author: Shahriar Kabir Sohan
+ * github: chaudhuree
+ * Program: Sum of Odd Numbers Between Two Integers
+ * https://codeforces.com/group/MWSDmqGsZm/contest/219432/problem/S
+ */
 #include <iostream>
 using namespace std;
 
-int main() {
-    long long a, b, k;
-    cin >> a >> b >> k;
+int main()
+{
+    int numberofTestCases;
+    cin >> numberofTestCases;
+    for (int i = 0; i < numberofTestCases; i++)
+    {
+        int a, b;
+        cin >> a >> b;
 
-    cout << (a%k==0 && b%k==0 ? "Both" :
-            a%k==0 ? "Memo" :
-            b%k==0 ? "Momo" :
-            "No One");
-
+        int start = min(a, b);
+        int end = max(a, b);
+        int sum = 0;
+        for (int i = start + 1; i < end; i++)
+        {
+            if (i % 2 != 0)
+            {
+                sum += i;
+            }
+        }
+        cout << sum << endl;
+    }
     return 0;
 }
