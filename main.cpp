@@ -11,15 +11,15 @@ int main()
 {
     int numberofTestCases;
     cin >> numberofTestCases;
-    for (int i = 0; i < numberofTestCases; i++)
+    while (numberofTestCases--)
     {
-        int a, b;
-        cin >> a >> b;
-
-        int start = min(a, b);
-        int end = max(a, b);
-        int sum = 0;
-        for (int i = start + 1; i < end; i++)
+        int firstInteger, secondInteger, sum = 0;
+        cin >> firstInteger >> secondInteger;
+        if (firstInteger > secondInteger)
+        {
+            swap(firstInteger, secondInteger);
+        }
+        for (int i = firstInteger + 1; i < secondInteger; i++)
         {
             if (i % 2 != 0)
             {
