@@ -3,22 +3,24 @@
  * github: chaudhuree
  */
 #include <iostream>
-#include <vector>
 using namespace std;
 
-int main()
-{
-    int arr[5] = {1, 3, 5, 4, 9};
-    int n =5;
-    int revArr[5];
-    for(int i = 0; i < n; i++)
-    {
-        revArr[i] = arr[n - 1 - i];
+int main() {
+
+    int arr[5] = {1,2,3,4,5};
+    int n = 5;
+
+    int left = 0;
+    int right = n-1;
+
+    while(left < right){
+
+        swap(arr[left], arr[right]);
+
+        left++;
+        right--;
     }
- 
-    for(int i = 0; i < n; i++)
-    {
-        cout << revArr[i] << " ";
-    }
-    return 0;
+
+    for(int i=0;i<n;i++)
+        cout<<arr[i]<<" ";
 }
